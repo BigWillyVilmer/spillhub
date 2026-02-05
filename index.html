@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <title>Spillhub</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: white;
+    }
+    header {
+      background: #020617;
+      padding: 15px;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .games {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    .game {
+      background: #1e293b;
+      border-radius: 12px;
+      padding: 15px;
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.2s, background 0.2s;
+    }
+    .game:hover {
+      transform: scale(1.05);
+      background: #334155;
+    }
+    .game img {
+      width: 100%;
+      border-radius: 8px;
+    }
+    footer {
+      text-align: center;
+      padding: 10px;
+      background: #020617;
+      font-size: 14px;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+  <header>🎮 Spillhub</header>
+
+  <div class="games">
+    <!-- Eksterne spill (lenker) -->
+    <div class="game" onclick="openExternal('https://sz-games.github.io/')">
+      <img src="https://sz-games.github.io/favicon.ico" alt="SZ Games">
+      <h3>SZ Games (samling)</h3>
+    </div>
+
+    <div class="game" onclick="openExternal('https://just-fall.github.io/')">
+      <img src="https://just-fall.github.io/favicon.ico" alt="JustFall">
+      <h3>JustFall</h3>
+    </div>
+
+    <div class="game" onclick="openExternal('https://poki.com/en/g/cut-the-rope')">
+      <img src="https://poki.com/favicon.ico" alt="Cut the Rope">
+      <h3>Cut the Rope</h3>
+    </div>
+
+    <div class="game" onclick="openExternal('https://poki.com/en/g/cut-the-rope-2')">
+      <img src="https://poki.com/favicon.ico" alt="Cut the Rope 2">
+      <h3>Cut the Rope 2</h3>
+    </div>
+
+    <div class="game" onclick="openExternal('https://poki.com/en/g/cut-the-rope-time-travel')">
+      <img src="https://poki.com/favicon.ico" alt="Cut the Rope 3">
+      <h3>Cut the Rope 3</h3>
+    </div>
+
+    <div class="game" onclick="openExternal('https://poki.com/en/g/drive-mad')">
+      <img src="https://poki.com/favicon.ico" alt="Drive Mad">
+      <h3>Drive Mad</h3>
+    </div>
+
+    <!-- Lokale spill (eksempel) -->
+    <div class="game" onclick="openGame('games/game1/index.html')">
+      <img src="games/game1/thumbnail.png" alt="Spill 1">
+      <h3>Spill 1</h3>
+    </div>
+
+    <div class="game" onclick="openGame('games/game2/index.html')">
+      <img src="games/game2/thumbnail.png" alt="Spill 2">
+      <h3>Spill 2</h3>
+    </div>
+  </div>
+
+    <div class="game" onclick="openGame('games/game2/index.html')">
+      <img src="games/game2/thumbnail.png" alt="Spill 2">
+      <h3>Spill 2</h3>
+    </div>
+  </div>
+
+  <footer>
+    Laget med ❤️ – Hostet på GitHub Pages
+  </footer>
+
+  <script>
+    function openGame(path) {
+      window.location.href = path;
+    }
+    function openExternal(url) {
+      window.open(url, '_blank');
+    }
+  </script>
+</body>
+</html>
